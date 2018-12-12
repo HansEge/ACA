@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.26)  12 DEC 2018 13:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.26)  12 DEC 2018 13:53
 entering extended mode
 **./ACA_Projekt.tex
 (ACA_Projekt.tex
@@ -1253,7 +1253,31 @@ _loop_system.aux'.
 \openout2 = `Chapters/Pol-placering/Pol-placering.aux'.
 
 
-(Chapters/Pol-placering/Pol-placering.tex)
+(Chapters/Pol-placering/Pol-placering.tex
+<Chapters/Pol-placering/Img/StepOfSysSS_cl.png, id=36, 421.575pt x 316.18124pt>
+
+File: Chapters/Pol-placering/Img/StepOfSysSS_cl.png Graphic file (type png)
+<use Chapters/Pol-placering/Img/StepOfSysSS_cl.png>
+Package pdftex.def Info: Chapters/Pol-placering/Img/StepOfSysSS_cl.png  used on
+ input line 6.
+(pdftex.def)             Requested size: 400.0pt x 300.0038pt.
+)
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 110.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 110.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 110.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 110.
+ [4
+
+
+
+
+
+
+ <./Chapters/Pol-placering/Img/StepOfSysSS_cl.png (PNG copy)>]
 \openout2 = `Chapters/Observer/Observer.aux'.
 
  (Chapters/Observer/Observer.tex)
@@ -1278,13 +1302,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 124.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 124.
- [4
-
-
-
-
-
-
+ [5
 
 
 
@@ -1308,10 +1326,10 @@ Package rerunfilecheck Info: File `ACA_Projekt.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 124.
  ) 
 Here is how much of TeX's memory you used:
- 23753 strings out of 493303
- 436183 string characters out of 3129784
- 611562 words of memory out of 3000000
- 26807 multiletter control sequences out of 15000+200000
+ 23771 strings out of 493303
+ 436601 string characters out of 3129784
+ 611606 words of memory out of 3000000
+ 26820 multiletter control sequences out of 15000+200000
  12880 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,6n,92p,469b,684s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1320,9 +1338,9 @@ Here is how much of TeX's memory you used:
 blic/amsfonts/cm/cmcsc10.pfb><C:/Users/stinu/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/stinu/AppData/Local/Programs
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on ACA_Projekt.pdf (5 pages, 80757 bytes).
+Output written on ACA_Projekt.pdf (6 pages, 96491 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 9 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 64 PDF objects out of 1000 (max. 8388607)
+ 11 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
