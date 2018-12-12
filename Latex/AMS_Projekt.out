@@ -1,0 +1,29 @@
+\BOOKMARK [1][-]{section.1}{Indledning}{}% 1
+\BOOKMARK [1][-]{section.2}{Krav}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{UC1 - Read Color}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{UC2 - Save Data}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{UC3 - Read Data}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Afgr\346nsning}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Systemarkitektur}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Blokidentifikation}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.2}{Blokinteraktion}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{Color Sensor Module}{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{LC Technology TCS3200}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Input Capture}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.3}{Color Sensor Module Software}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.4}{Test}{section.4}% 14
+\BOOKMARK [1][-]{section.5}{TFT Display Module}{}% 15
+\BOOKMARK [2][-]{subsection.5.1}{Hardware}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.2}{Software}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.3}{Test}{section.5}% 18
+\BOOKMARK [1][-]{section.6}{I2C kommunikation}{}% 19
+\BOOKMARK [2][-]{subsection.6.1}{I2C master}{section.6}% 20
+\BOOKMARK [2][-]{subsection.6.2}{I2C slave}{section.6}% 21
+\BOOKMARK [2][-]{subsection.6.3}{Test}{section.6}% 22
+\BOOKMARK [1][-]{section.7}{Alternative L\370sninger}{}% 23
+\BOOKMARK [2][-]{subsection.7.1}{Valg af Kommunikation}{section.7}% 24
+\BOOKMARK [2][-]{subsection.7.2}{Valg af color sensor}{section.7}% 25
+\BOOKMARK [2][-]{subsection.7.3}{Valg af sk\346rm}{section.7}% 26
+\BOOKMARK [1][-]{section.8}{Resultater}{}% 27
+\BOOKMARK [2][-]{subsection.8.1}{Visuel test af samlet sysyem}{section.8}% 28
+\BOOKMARK [1][-]{section.9}{Konklussion}{}% 29

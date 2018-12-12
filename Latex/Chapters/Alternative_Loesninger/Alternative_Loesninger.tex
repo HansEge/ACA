@@ -1,0 +1,18 @@
+%!TEX root = ../../Main.tex
+\graphicspath{{Chapters/Alternative_Loesninger/}}
+%-------------------------------------------------------------------------------
+
+
+\section{Alternative Løsninger}
+I dette afsnit vil fordele og ulemper for forskellige alternative løsninger blive diskuteret.
+
+\subsection{Valg af Kommunikation}
+Istedet for I2C som kommunikationsprotokol var SPI oplagt. SPI har den fordel at være hurtigere, men kræver 4 ledninger. SPI er hurtigere fordi protokollen kan køre full-duplex, hvorimod I2C er half-duplex. Men da antallet af ledninger var mindre og at vores behov for overførelseshastighed var opfyldt med I2C, valgte vi denne protokol.
+
+Det skal siges at det aldrig var meningen at indbringe to arduinoer, da det ville gøre system mere kompleks uden at give ekstra værdi, men da sensor og skærm ikke kunne komme til at fungere op samme arduino, endte valget på I2C som en løsning på det problem.
+
+\subsection{Valg af color sensor}
+Da projektet ikke vil kunne realiseres uden en color sensor, og at der ikke var andre end LC technology TC3200 sensoren på lager, var den det oplagte valg. Men efter at have arbejdet med den og testet den, fandt vi hurtigt ud af at den ikke var specielt præcis i sin målinger. Derfor vil en sensor af bedre kvalitet have være at foretrække, men som proof of concept fungerer den nuværende sensor fint. 
+
+\subsection{Valg af skærm}
+Istedet for en farve-skærm, kunne vi have valgt et alphanumerisk display, men dette vil være en betydelig nedgradering fra den nuværende farve-skærm. Derudover vil det ikke være muligt at vise søjlediagrammer på et alphanumerisk display. Desuden er der indbygget touch i farve-skærmen, som i fremtiden vil kunne inkorporeres, hvis dette ønskes.

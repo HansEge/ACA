@@ -1,0 +1,30 @@
+\babel@toc {danish}{}
+\contentsline {section}{\numberline {1}Indledning}{3}{section.1}
+\contentsline {section}{\numberline {2}Krav}{4}{section.2}
+\contentsline {subsection}{\numberline {2.1}UC1 - Read Color}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}UC2 - Save Data}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}UC3 - Read Data}{5}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Afgr\IeC {\ae }nsning}{5}{subsection.2.4}
+\contentsline {section}{\numberline {3}Systemarkitektur}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Blokidentifikation}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Blokinteraktion}{6}{subsection.3.2}
+\contentsline {section}{\numberline {4}Color Sensor Module}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}LC Technology TCS3200}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Input Capture}{9}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Color Sensor Module Software}{10}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Test}{11}{subsection.4.4}
+\contentsline {section}{\numberline {5}TFT Display Module}{14}{section.5}
+\contentsline {subsection}{\numberline {5.1}Hardware}{14}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Software}{14}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Test}{19}{subsection.5.3}
+\contentsline {section}{\numberline {6}I2C kommunikation}{21}{section.6}
+\contentsline {subsection}{\numberline {6.1}I2C master}{21}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}I2C slave}{22}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Test}{23}{subsection.6.3}
+\contentsline {section}{\numberline {7}Alternative L\IeC {\o }sninger}{25}{section.7}
+\contentsline {subsection}{\numberline {7.1}Valg af Kommunikation}{25}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Valg af color sensor}{25}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Valg af sk\IeC {\ae }rm}{25}{subsection.7.3}
+\contentsline {section}{\numberline {8}Resultater}{26}{section.8}
+\contentsline {subsection}{\numberline {8.1}Visuel test af samlet sysyem}{26}{subsection.8.1}
+\contentsline {section}{\numberline {9}Konklussion}{28}{section.9}

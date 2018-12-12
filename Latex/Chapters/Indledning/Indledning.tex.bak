@@ -1,0 +1,71 @@
+%!TEX root = ../../Main.tex
+\graphicspath{{Chapters/Indledning/}}
+%-------------------------------------------------------------------------------
+
+\chapter{Indledning}
+
+Elektroniske apperater bliver i hver dag en større og større del, af hverdagen for mennesker verden over. Dette gælder også for legetøj til børn, hvor forståelse og læring gennem leg, kan medvirke til bedre forståelse af det elektriske apperator. \\
+Vi har valgt at fokusere dette projekt på et legetøjsvåben, som kan bruges af børn verden over. 
+Dette legetøjsvåben har vi valgt at kalde "Big Fucking Gun" (BFG). \\
+
+Systemet vil bestå af en grafisk brugergrænseflade på en PC-app, hvorigennem brugeren let kan intergere med systemet.
+Programmet skal gøre det muligt for brugeren, at kunne skyde efter et bestemt mål. Her kan brugeren vælge om BFG skal udvælge et bestemt mål, vha billedeprocesering, eller brugeren manuelt vil udvælge og skyde efter et bestemt mål. Brugeren kan hele tiden visuelt se hvor BFG sigter hen, da der er placeret et kamara på løbet til skyderen. Derudover kan brugeren observere afstanden til målet, da der også er udstyret en afstandsmåler på løbet. \\
+
+Selve affyringmpdulet, består af en kompressor som åbner for et lufttryk når brugeren vælger at affyre. Selve projektilet kommer i produktet til at være en nerf-gun projektil, for at opretholde      
+
+ Når systemet er konfigureret vil vanding foregå automatisk gennem en tidsstyring. Udluftning foregår ved hjælp af en temperaturmåler monteret i drivhuset, og vil automatisk åbne og lukke for vinduet i drivhuset efter behov, for at lufte ud og holde temperaturen på de brugerdefinerede værdier. Desuden vil systemet være udstyret med specielle LED lys, designet til plantevækst. Dette giver brugeren mulighed for at give planterne i drivhuset optimale vækstbetingelser, selv i mørke perioder. \\
+
+Med udgangspunkt i brugerens behov vil der blive opstillet en række brugsscenarier, der beskriver brugerens interaktion med systemet. Disse scenarier vil sammen med en række veldefinerede krav og afgrænsninger, danne grundlaget for designet af alle dele af systemet. I selve designfasen vil systemet blive opdelt i mindre dele, kaldet moduler, for at lette overskueligheden og gøre systemet mere fleksibelt og skalerbart.  \\ 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 400pt]{Img/Konceptbillede}
+\caption{Konceptbillede af BFG 3000}
+\label{fig:Konceptbillede}
+\end{figure}
+
+\newpage
+\section{Læsevejledning}
+
+\section{Termliste}
+
+\begin{table}[H]
+	\centering
+	\sffamily
+	\small
+	\begin{tabular}{ p{4cm} | p{8cm} }
+		\toprule
+		\textbf{Navn}:              & \textbf{Beskrivelse:} \\
+		\midrule
+		\textbf{Baby Carrige}:          & En automatisk barnevogn, som kan vugge og spille musik ved detektering af babygråd. \\
+		& \\
+		\midrule
+		\textbf{GUI:}           & En grafisk brugergrænseflade der kører som program, på en indlejret linux platform med tilhørende touchskærm. Denne platform sidder på barnevognen og præsentere hovemenuen til aktivering af babypasning, samt menu for walk-funktion.\\
+		& \\
+		\midrule
+		\textbf{PSoC/PSoC5:}     & En microcontroller, som bruges til styring af vuggefunktion samt måling af distance. Der bruges 5 stks. PSoC5 til dette produkt. \\
+		& \\
+		\midrule                  
+		\textbf{Devkit/DevKit8000:}          & Et hardware modul, der bruges som touch interface og er placeret på barnevognens styr.\\
+		& \\
+		\midrule                  
+		\textbf{Låse modul:}         & Et hardware modul, som kan scanne en persons fingeraftryk og derved give adgang til hovedmenuen på touch interfacet, hvis man er registreret. Desuden kan modulet bruges til at låse systemet og derved nægte adgangen til hovedmenuen.\\
+		& \\
+		\midrule                  
+		\textbf{Vippe modul:}          & Et hardware modul med tilkoblet DC motor, til at vugge barnevognen. Styres af en PSoC5.\\
+		& \\
+		\midrule                  
+		\textbf{Mikrofon modul:}  &  Et hardware modul, tilkoblet en mikrofon til at genkende og registrere babygråd med. Styres af en PSoC5.\\
+		& \\
+		\midrule                  
+		\textbf{Distancemåler modul:}  &  Et hardware modul, som er placeret på barnevognens ene hjul til måling af distance. Styres af en PSoC5.\\
+%		& \\
+		\bottomrule
+	\end{tabular}
+	\caption[Short caption]{Termliste}
+	\label{table:termliste}
+\end{table}
+
+\newpage
+\section{Primære Ansvarsområder}
