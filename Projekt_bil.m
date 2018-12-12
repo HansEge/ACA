@@ -1,7 +1,7 @@
 close all;
+clear;
 
 load('bil_data.mat'); %Brug denne!
-
 
 %Få data ud af gemte filer
 motor_Deg = Rotation_Deg.signals.values;
@@ -31,8 +31,7 @@ title('Motor velocity');
 
 [A,B,C,D]=tf2ss(tf_degrees.Numerator,tf_degrees.Denominator);
 
-sysss=ss(A,B,C,D);
-
+sysSS=ss(A,B,C,D);
 %% Define requirements and desired location of poles
 OS = 5;
 Ts = 2;
@@ -40,25 +39,19 @@ zeta = -log(OS/100)/sqrt(pi^2+(log(OS/100)^2)); %desired damping ratio
 wn = 4/zeta/Ts; %desired natural frequency
 
 s = tf('s');
-ch_eqn = s^2+2*zeta*wn*s+wn^2;
-[p,z,gain] = zpkdata(ch_eqn);
-poles = cell2mat(p)'; %desired 2nd order poles for the closed loop system
-K = place(sysss.A,sysss.B,poles);
-
-
-
-
+ch_eqn = wn^2/(s^2+2*zeta*wn*s+wn^2); %Charactaristic equation
+poles = pole(ch_eqn);
+K = place(sysSS.A,sysSS.B,poles);
 %% Define closed loop system
 A_cl = [A-B*K];
-sysss_cl = ss(A_cl,B,C,D);
+sysSS_cl = ss(A_cl,B,C,D);
 
 figure
-step(sysss_cl);
-title('Step response of sysss_c_l without 3rd pole');
-
+step(sysSS_cl);
+title('Step response of sysSS_c_l');
 %% Insert 3rd pole to eliminate ss error
 p3 = -30;
-poles_new = [poles p3];
+poles_new = [poles' p3];
 
 A_new = [A [0;0];-C 0];
 B_new = [B;0];
@@ -71,25 +64,45 @@ A_cl_new = [A-B*K_new B*Ke;-C 0];
 B_cl_new = [0;0;1];
 C_cl_new = [C 0];
 
-sysss_new = ss(A_cl_new,B_cl_new,C_cl_new,D);
+sysSS_new = ss(A_cl_new,B_cl_new,C_cl_new,D);
+
 figure
-step(sysss_new);
-title('Step response of sysss_n_e_w with 3rd pole');
+step(sysSS_new);
+title('Step response of sysSS_n_e_w with 3rd pole');
+%% Oberserver design in discrete form
+sysSSD=c2d(sysSS,ts,'zoh');%Discrete
 
-%% Oberserver design in descrete form
+ch_eqnD = c2d(ch_eqn,ts,'tustin');
+polesD = pole(ch_eqnD);
 
-sysssD=c2d(sysss,ts,'tustin');%Discrete
+K_z = place(sysSSD.A,sysSSD.B,polesD);
+A_cl = [sysSSD.A-sysSSD.B*K_z];
 
-ch_eqnz = c2d(ch_eqn,ts,'tustin');
-[p_z,z_z,gain_z] = zpkdata(ch_eqnz);
-poles_z = cell2mat(p_z)';
+sysssD_cl = ss(A_cl,sysSSD.B,sysSSD.C,sysSSD.D,ts);
 
-K_z = place(sysssD.A,sysssD.B,poles_z);
-A_cl = [sysssD.A-sysssD.B*K_z];
+observer_req = poles*30;
+observer_reqZ = polesD/30;
 
-sysssD_cl = ss(A_cl,sysssD.B,sysssD.C,sysssD.D,ts);
+L = (place(sysSS.A',sysSS.C',observer_req))';
+Ld = (place(sysSSD.A',sysSSD.C',observer_reqZ))';
+%% Eliminate ss error in z-domain
 
-observer_req = poles*5;
+p3_z = -0.000425;%HVORFOR ER SKAL DENNE POL LIGGE PRÆCIS I -0.000425???
+polesD_new = [polesD' p3_z];
 
-L = (place(sysss.A',sysss.C',observer_req))';
+A_newD = [sysSSD.A [0;0];-sysSSD.C 0];
+B_newD = [sysSSD.B;0];
 
+K_newD = place(A_newD,B_newD,polesD_new);
+Ke_z = -K_newD(3);
+
+K_newD = [K_newD(1) K_newD(2)];
+
+A_cl_newD = [sysSSD.A-sysSSD.B*K_newD sysSSD.B*Ke_z;-sysSSD.C 0];
+B_cl_newD = [0;0;1];
+C_cl_newD = [sysSSD.C 0];
+
+sysss_newD = ss(A_cl_newD,B_cl_newD,C_cl_newD,D,ts);
+figure
+step(sysss_newD);
+title('sysSS_n_e_w_D with Ke in z-domain');
