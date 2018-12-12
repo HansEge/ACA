@@ -1,0 +1,124 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage[danish]{babel}
+\usepackage{mathtools}
+\usepackage[euler]{textgreek}
+\usepackage[numbered,final]{mcode}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[toc,page]{appendix}
+%\usepackage{float}
+\usepackage{floatrow} % used for adding "Source" to pictures
+\usepackage{hyperref} % used for hyperlinks
+\usepackage[all]{hypcap}
+\usepackage{bm} % used for bold inline matj
+\usepackage{lipsum} % used for lorem lipsum
+\usepackage[final]{pdfpages} % used for including PDF's
+\usepackage{geometry}
+\usepackage{listingsutf8}
+\usepackage{listings}
+\usepackage{blindtext}
+\usepackage{enumitem}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\hypersetup{colorlinks=true, linkcolor=black}
+
+% Page margins
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in,headsep=0.35in}
+
+\begin{document}
+	
+	\begin{titlepage}
+		
+		
+		
+		\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+		\setlength{\topmargin}{0in}
+		\centering % Center everything on the page
+		
+		%----------------------------------------------------------------------------------------
+		%	HEADING SECTIONS
+		%----------------------------------------------------------------------------------------
+		\textsc{\LARGE Aarhus universitet}\\[1.5cm] % Name of your university/college
+		\textsc{\Large Adaptive Control and Automation}\\[0.5cm] % Major heading such as course name
+		\textsc{\large 7. Semester}\\[0.5cm] % Minor heading such as course title
+		
+		%----------------------------------------------------------------------------------------
+		%	TITLE SECTION
+		%----------------------------------------------------------------------------------------
+		
+		\HRule \\[0.4cm]
+		{ \huge \bfseries ACA projekt}\\ % Title of your document
+		\HRule \\[1cm]
+		
+		%----------------------------------------------------------------------------------------
+		%	AUTHOR SECTION
+		%----------------------------------------------------------------------------------------
+		
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\emph{Gruppemedlemmer:}\\
+				Daniel Tøttrup \\
+				Stinus Lykke Skovgaard \\
+			\end{flushleft}
+		\end{minipage}
+		~
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\emph{AUID} \\
+				au544366\\
+				au520659\
+			\end{flushright}
+		\end{minipage}\\[5cm]
+		
+		%----------------------------------------------------------------------------------------
+		%	LOGO SECTION
+		%----------------------------------------------------------------------------------------
+		
+		\includegraphics[scale=0.5]{Img/logo.jpg}\\[1cm]
+		
+		%----------------------------------------------------------------------------------------
+		%	DATE SECTION
+		%----------------------------------------------------------------------------------------
+		
+		{\large \today}\\[0.5cm] % Date, change the \today to a set date if you want to be precise
+		
+		
+		\vfill % Fill the rest of the page with whitespace
+		
+	\end{titlepage}
+	
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+
+\hypersetup{linkcolor=blue}
+
+
+
+\include{Chapters/Indledning/Indledning}
+\include{Chapters/Identifikation/Identifikation}
+\include{Chapters/Controller/Controller}
+\include{Chapters/Pol-placering/Pol-placering}
+\include{Chapters/Observer/Observer}
+\include{Chapters/Overvejelser_for_udvidelser/Overvejelser_for_udvidelser}
+\include{Chapters/Konklussion/Konklussion}
+
+\begin{flushleft}
+	
+\end{flushleft}
+
+
+\bibliographystyle{plain}
+\bibliography{Bibliography}	
+
+ 
+\end{document}
