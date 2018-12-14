@@ -21,14 +21,16 @@ Derefter skal vi bestemme nogle krav til systemet. Vi har valgt at vores oversho
 \end{figure}
 
 Vi gør brug af matlab funktionen place, som kan beregne vores state feedback matrix, K. Dette gør vi ved at indsætte state space variablerne A og B, som vi fandt frem til i starten og polerne fra vores karakteristik ligning. Dermed får vi beregnet vores feedback matrix så den passer med vores krav.
-Nu kan vi teste om vores controller fungerer efter hensigten ved at smide et stepinput ind i systemet og kigge på responsen. Dette kan ses nedenfor.  
+Nu kan vi teste om vores controller fungerer efter hensigten ved at smide et stepinput ind i systemet og kigge på responsen. Dette kan ses på \autoref{fig:StepOfSysSS_cl}.  
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width = 400pt]{Img/StepOfSysSS_cl.png}
 	\caption{Steprespons for closed loop system}
-	\label{fig:SteadyStateBlok}
+	\label{fig:StepOfSysSS_cl}
 \end{figure}
+
+
 
 \subsection{Steady state error}
 
