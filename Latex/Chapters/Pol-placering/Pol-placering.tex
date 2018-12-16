@@ -3,14 +3,14 @@
 %-------------------------------------------------------------------------------
 
 \section{Pol-placering}
-For at designe en lukket sløjfe controller for ens system, har vi gjort brug af pol-placerings princippet. Dette gøres ved at først at bestemme hvilken orden ens system har (første, anden osv.). Ud fra hvilken orden ens system har kan man lave en karakteristik ligning for denne. I vores tilfælde er det et anden-ordens system, hvilket for ligningen til at se således ud:
+For at designe en lukket sløjfe controller for ens system, har vi gjort brug af pol-placerings princippet. Dette gøres ved først at bestemme hvilken orden ens system har (første, anden osv.). Ud fra hvilken orden ens system har, kan man lave en karakteristik ligning for denne. I vores tilfælde er det et anden-ordens system, hvilket for ligningen til at se således ud:
 
 \begin{equation}
  \frac{wn^2}{s^2+2*\zeta*wn*s+wn^2}
 \end{equation}
 
 
-Derefter skal vi bestemme nogle krav til systemet. Vi har valgt at vores overshoot skal ligge på 5\% og vores settlingtime til 2 sekunder. Disse krav er forskellige fra system til system og bestemmes af hvad systemet skal bruges til. Når vi har valgt vores settlingtime og overshoot kan vi finde polerne for karakteristikligningen. Disse poler skal bruges til at designe vores controller, så den får den rette karakteristik, altså 5\% overshoot og 2 sekunders settlingtime. Nedenunder kan man se blok opbygningen af et system med state-variable feedback på \autoref{fig:Blok_CL}
+Derefter skal vi bestemme nogle krav til systemet. Vi har valgt at vores overshoot skal ligge på 5\% og vores settlingtime til 2 sekunder. Disse krav er forskellige fra system til system og bestemmes af, hvad systemet skal bruges til. Når vi har valgt vores settlingtime og overshoot, kan vi finde polerne for karakteristikligningen. Disse poler skal bruges til at designe vores controller, så den får den rette karakteristik, altså 5\% overshoot og 2 sekunders settlingtime. Nedenunder kan man se blok opbygningen af et system med state-variable feedback på \autoref{fig:Blok_CL}
 
 \begin{figure}[H]
 	\centering
@@ -92,7 +92,7 @@ step(sysSS_new);
 title('Step response of sysSS_n_e_w with 3rd pole');
 \end{lstlisting}
 
-Hvis vi igen tester systemet med et step, kan man se at den stationære fejl nu er 0, og bilen vil altså nu kører præcis så langt, som vi siger den skal køre. Stepresponset kan ses på 
+Hvis vi igen tester systemet med et step, kan man se at den stationære fejl nu er 0, og bilen vil altså nu kører præcis så langt, som vi siger den skal køre. Stepresponset kan ses på \autoref{fig:SteadyState_stepresponse} 
 
 \begin{figure}[H]
 	\centering

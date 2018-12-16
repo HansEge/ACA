@@ -35,9 +35,9 @@ Vi besluttede os for at gå videre med disse målinger, og benyttede os af "tfes
 \end{equation}
 
 
-Vi ønsker at opstille vores system på state space form, da det gør det mulig at evaluere systemet ved hjælp af matricx algebra. State space er specielt brugbart i systemer med flere input og flere outputs, i kontrast til klassisk kontrol metoder, så som PID-regulering, som bygger på komplekse lapace og fourier ligninger som skal transformeres frem og tilbage mellem tids- og frekvensdomænet. 
+Vi ønsker at opstille vores system på state space form, da det gør det mulig at evaluere systemet ved hjælp af matrix algebra. State space er specielt brugbart i systemer med flere input og flere outputs, i kontrast til klassisk kontrol metoder, så som PID-regulering, som bygger på komplekse lapace og fourier ligninger, som skal transformeres frem og tilbage mellem tids- og frekvensdomænet. 
 En af de helt store fordele ved state space kontrol er dens anvendelighed til et bredt spekter af systemer, det kan både anvendes på linær og ikke linære, tidsafhængelige og tids uafhændelige, single-input single-output og multiple-input og multiple-output systemer.
-State space bliver repræsenteret ved bare to ligninger. Første ligning, som ses på \autoref{eq:StateSpace_form1}, giver forholdet mellem systemets nuværende state og inputtet til dens næste state. \autoref{eq:StateSpace_form2} viser at systemets output er afhængig af systemets nuværende state. På \autoref{fig:StateSpaceBlockDiagram} ses et state space block diagram. \begin{equation}
+State space bliver repræsenteret ved bare to ligninger. Første ligning, som ses på \autoref{eq:StateSpace_form1}, giver forholdet mellem systemets nuværende state og den afledte state. \autoref{eq:StateSpace_form2} viser at systemets output er afhængig af systemets nuværende state. På \autoref{fig:StateSpaceBlockDiagram} ses et state space block diagram. \begin{equation}
 \dot{x} = A * x(t) + B * u(t)
 \label{eq:StateSpace_form1}
 \end{equation}
